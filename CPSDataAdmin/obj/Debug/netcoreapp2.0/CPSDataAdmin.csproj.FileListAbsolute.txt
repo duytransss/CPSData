@@ -1,0 +1,11 @@
+D:\CPSDataAdmin\CPSDataAdmin\bin\Debug\netcoreapp2.0\CPSDataAdmin.deps.json
+D:\CPSDataAdmin\CPSDataAdmin\bin\Debug\netcoreapp2.0\CPSDataAdmin.runtimeconfig.json
+D:\CPSDataAdmin\CPSDataAdmin\bin\Debug\netcoreapp2.0\CPSDataAdmin.runtimeconfig.dev.json
+D:\CPSDataAdmin\CPSDataAdmin\bin\Debug\netcoreapp2.0\CPSDataAdmin.dll
+D:\CPSDataAdmin\CPSDataAdmin\bin\Debug\netcoreapp2.0\CPSDataAdmin.pdb
+D:\CPSDataAdmin\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.csprojAssemblyReference.cache
+D:\CPSDataAdmin\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.csproj.CoreCompileInputs.cache
+D:\CPSDataAdmin\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.AssemblyInfoInputs.cache
+D:\CPSDataAdmin\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.AssemblyInfo.cs
+D:\CPSDataAdmin\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.dll
+D:\CPSDataAdmin\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.pdb

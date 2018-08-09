@@ -1,0 +1,19 @@
+.thead-dark a{
+  color:#fff;
+}
+.search-filters .col {
+    min-width:33%;
+    margin-bottom:5px;
+}
+@media(max-width:768px){
+    .search-filters .col {
+        min-width:50%;
+        font-size:14px;
+    }
+}
+@media(max-width:340px){
+    .search-filters .col {
+        min-width:100%;
+
+    }
+}
