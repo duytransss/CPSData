@@ -162,6 +162,10 @@ namespace CPSDataAdmin.Data.Migrations
                     b.Property<string>("UserName")
                         .HasAnnotation("MaxLength", 256);
 
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")

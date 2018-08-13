@@ -13451,6 +13451,8 @@
       "Microsoft.AspNetCore.All >= 2.0.8",
       "Microsoft.AspNetCore.Authorization >= 2.1.1",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.1.2",
+      "Microsoft.EntityFrameworkCore.Design >= 2.0.3",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.3",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.4"
@@ -13463,11 +13465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CPSDataAdmin\\CPSDataAdmin\\CPSDataAdmin.csproj",
+      "projectUniqueName": "D:\\CPSData\\CPSData\\CPSDataAdmin\\CPSDataAdmin.csproj",
       "projectName": "CPSDataAdmin",
-      "projectPath": "D:\\CPSDataAdmin\\CPSDataAdmin\\CPSDataAdmin.csproj",
+      "projectPath": "D:\\CPSData\\CPSData\\CPSDataAdmin\\CPSDataAdmin.csproj",
       "packagesPath": "C:\\Users\\duytran\\.nuget\\packages\\",
-      "outputPath": "D:\\CPSDataAdmin\\CPSDataAdmin\\obj\\",
+      "outputPath": "D:\\CPSData\\CPSData\\CPSDataAdmin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13508,6 +13510,14 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[2.1.2, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "target": "Package",
+            "version": "[2.0.3, )"
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[2.0.3, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "suppressParent": "All",

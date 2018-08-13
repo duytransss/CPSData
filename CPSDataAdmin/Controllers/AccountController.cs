@@ -22,17 +22,20 @@ namespace CPSDataAdmin.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
+            RoleManager<IdentityRole> roleManager,
             IEmailSender emailSender,
             ILogger<AccountController> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
             _emailSender = emailSender;
             _logger = logger;
         }
@@ -46,7 +49,11 @@ namespace CPSDataAdmin.Controllers
         {
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
-
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            if (user != null)
+            {
+                return RedirectToAction("Index","Home");
+            }
             ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
@@ -220,12 +227,39 @@ namespace CPSDataAdmin.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, FirstName = model.FirstName, LastName = model.LastName, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
-                {
-                    _logger.LogInformation("User created a new account with password.");
 
+                var rolename = "";
+                IdentityResult roleResult;
+                //Adding Addmin Role  
+
+                if (model.IsAdmin == true)
+                {
+                    rolename = "Admin";
+                    var roleCheck = await _roleManager.RoleExistsAsync("Admin");
+                    if (!roleCheck)
+                    {
+                        //create the roles and seed them to the database  
+                        roleResult = await _roleManager.CreateAsync(new IdentityRole("Admin"));
+                    }
+                }
+                else
+                {
+                    rolename = "User";
+                    var roleCheck = await _roleManager.RoleExistsAsync("User");
+                    if (!roleCheck)
+                    {
+                        //create the roles and seed them to the database  
+                        roleResult = await _roleManager.CreateAsync(new IdentityRole("User"));
+                    }
+                }
+
+                var roleresult = await _userManager.AddToRoleAsync(user, rolename);
+                if (result.Succeeded && roleresult.Succeeded)
+                {
+
+                    _logger.LogInformation("User created a new account with password.");
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
                     await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl);
@@ -312,6 +346,7 @@ namespace CPSDataAdmin.Controllers
                 }
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user);
+
                 if (result.Succeeded)
                 {
                     result = await _userManager.AddLoginAsync(user, info);
@@ -361,7 +396,7 @@ namespace CPSDataAdmin.Controllers
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(model.Email);
-                if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
+                if (user == null || (await _userManager.IsEmailConfirmedAsync(user)))
                 {
                     // Don't reveal that the user does not exist or is not confirmed
                     return RedirectToAction(nameof(ForgotPasswordConfirmation));

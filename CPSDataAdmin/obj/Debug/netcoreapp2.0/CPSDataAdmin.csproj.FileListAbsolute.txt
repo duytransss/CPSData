@@ -9,3 +9,15 @@ D:\CPSDataAdmin\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.AssemblyInfoIn
 D:\CPSDataAdmin\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.AssemblyInfo.cs
 D:\CPSDataAdmin\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.dll
 D:\CPSDataAdmin\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.pdb
+D:\CPSData\CPSData\CPSDataAdmin\bin\Debug\netcoreapp2.0\CPSDataAdmin.deps.json
+D:\CPSData\CPSData\CPSDataAdmin\bin\Debug\netcoreapp2.0\CPSDataAdmin.runtimeconfig.json
+D:\CPSData\CPSData\CPSDataAdmin\bin\Debug\netcoreapp2.0\CPSDataAdmin.runtimeconfig.dev.json
+D:\CPSData\CPSData\CPSDataAdmin\bin\Debug\netcoreapp2.0\CPSDataAdmin.dll
+D:\CPSData\CPSData\CPSDataAdmin\bin\Debug\netcoreapp2.0\CPSDataAdmin.pdb
+D:\CPSData\CPSData\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.csprojAssemblyReference.cache
+D:\CPSData\CPSData\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.csproj.CoreCompileInputs.cache
+D:\CPSData\CPSData\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.AssemblyInfoInputs.cache
+D:\CPSData\CPSData\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.AssemblyInfo.cs
+D:\CPSData\CPSData\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.dll
+D:\CPSData\CPSData\CPSDataAdmin\obj\Debug\netcoreapp2.0\CPSDataAdmin.pdb
+D:\CPSData\CPSData\CPSDataAdmin\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
